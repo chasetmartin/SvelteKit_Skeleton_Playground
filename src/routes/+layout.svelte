@@ -5,8 +5,10 @@
 	import '@skeletonlabs/skeleton/styles/all.css';
 	// Most of your app wide CSS should be put in this file
 	import '../app.postcss';
-	import { AppShell, AppBar, Avatar, Drawer, drawerStore } from '@skeletonlabs/skeleton';
+	import { AppShell, AppBar, Avatar, Drawer, drawerStore, LightSwitch } from '@skeletonlabs/skeleton';
 	import Navigation from '$lib/components/navigation.svelte';
+	import Footer from '$lib/components/footer.svelte';
+	import Login from '$lib/components/login.svelte';
 
 	function drawerOpen(): void {
 		drawerStore.open();
@@ -33,6 +35,7 @@
 				<strong class="text-xl">Western Water</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
+				<LightSwitch />
 				<Avatar class="w-10" initials="WW" background="bg-primary-500" />
 			</svelte:fragment>
 		</AppBar>
@@ -40,13 +43,17 @@
 	<svelte:fragment slot="sidebarLeft">
 		<Navigation />
 	</svelte:fragment>
-	<svelte:fragment slot="sidebarRight">Sidebar Right</svelte:fragment>
-	<svelte:fragment slot="pageHeader">Page Header</svelte:fragment>
+	<svelte:fragment slot="sidebarRight">
+		<Login />
+	</svelte:fragment>
+	<svelte:fragment slot="pageHeader"></svelte:fragment>
 	<!-- Router Slot -->
 	<div class="container p-10 mx-auto">
 		<slot />
 	</div>
 	<!-- ---- / ---- -->
-	<svelte:fragment slot="pageFooter">Page Footer</svelte:fragment>
-	<svelte:fragment slot="footer">Footer</svelte:fragment>
+	<svelte:fragment slot="pageFooter"></svelte:fragment>
+	<svelte:fragment slot="footer">
+		<Footer />
+	</svelte:fragment>
 </AppShell>
