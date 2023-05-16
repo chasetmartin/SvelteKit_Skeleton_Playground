@@ -1,7 +1,13 @@
 <!-- YOU CAN DELETE EVERYTHING IN THIS PAGE -->
 
 <div class="container h-full mx-auto flex justify-center items-center">
-	<div>
-		<h1>Welcome to your new favorite river app</h1>
+	<div class="p-4">
+		<h1>Welcome to Alcyon</h1>
 	</div>
 </div>
+<div class="container h-full mx-auto flex justify-center items-center">
+	<div class="p-4">
+		<h2 class="badge variant-soft">Your home for fast, reliable, and customizable river flows and forecasting</h2>
+	</div>
+</div>
+

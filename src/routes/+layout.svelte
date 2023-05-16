@@ -32,11 +32,11 @@
 						</svg>
 					</span>
 				</button>
-				<strong class="text-xl">Western Water</strong>
+				<strong class="text-xl">Alcyon</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<LightSwitch />
-				<Avatar class="w-10" initials="WW" background="bg-primary-500" />
+				<Avatar class="w-10" initials="A" background="bg-primary-500" />
 			</svelte:fragment>
 		</AppBar>
 	</svelte:fragment>

@@ -16,8 +16,18 @@ export const load = (async () => {
 
         return formattedData
     } 
+    const getChartData = async () => {
+        const res = await fetch("https://waterservices.usgs.gov/nwis/iv/?sites=" + popularSites + "&parameterCd=00060&period=P7D&siteStatus=all&format=json")
+        const data = await res.json();
+        return data.value.timeSeries;
+        // const data2 = data.value;
+        // const formattedData = data2.timeSeries[0].values[0].value;
+
+        // return formattedData
+    } 
     return {
         streamflow: getNowStreamData(),
         formattedData: getSevenDayStreamData(),
+        chartdata: getChartData(),
     };
 }) satisfies PageServerLoad;
