@@ -10,6 +10,6 @@
     <ul>
         <li><a href="/" on:click={drawerClose}>Home</a></li>
         <li><a href="/about" on:click={drawerClose}>About</a></li>
-        <li><a href="/rivers" on:click={drawerClose}>Rivers</a></li>
+        <li><a href="/rivers" data-sveltekit-preload-data on:click={drawerClose}>Rivers</a></li>
     </ul>
 </nav>

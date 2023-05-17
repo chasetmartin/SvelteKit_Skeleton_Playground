@@ -32,7 +32,7 @@
 						</svg>
 					</span>
 				</button>
-				<strong class="text-xl">Alcyon</strong>
+				<strong class="text-xl p-6">ALCYON Rec</strong>
 			</svelte:fragment>
 			<svelte:fragment slot="trail">
 				<LightSwitch />

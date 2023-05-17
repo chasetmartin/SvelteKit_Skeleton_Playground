@@ -1,13 +1,13 @@
 <script lang="ts">
     import Currentflowcard from '$lib/components/currentflowcard.svelte';
-	import Currentflowcard2 from '$lib/components/currentflowcard2.svelte';
-	import Currentflowcard3 from '$lib/components/currentflowcard3.svelte';
-	import Currentflowcard4 from '$lib/components/currentflowcard4.svelte';
+	// import Currentflowcard2 from '$lib/components/currentflowcard2.svelte';
+	// import Currentflowcard3 from '$lib/components/currentflowcard3.svelte';
+	// import Currentflowcard4 from '$lib/components/currentflowcard4.svelte';
     import type { PageData } from './$types';
     
     export let data: PageData;
-    const streamflow = data.streamflow.timeSeries;
-    const formattedData = data.formattedData;
+    // const streamflow = data.streamflow.timeSeries;
+    // const formattedData = data.formattedData;
     const chartdata = data.chartdata;
 
     // const riverName = streamflow.timeSeries[0].sourceInfo.siteName;

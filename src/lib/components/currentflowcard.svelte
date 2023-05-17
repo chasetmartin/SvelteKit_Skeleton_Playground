@@ -26,10 +26,15 @@
         </div>
         <div class="p-4">
         <Accordion>
-          <AccordionItem open>
-            <svelte:fragment slot="lead">(icon)</svelte:fragment>
+          <AccordionItem>
+            <svelte:fragment slot="lead"><svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 22 22"><g fill="none" stroke="currentColor"><path d="M3 3v18h18"></path><path d="m19 9l-5 5l-4-4l-3 3"></path></g></svg></svelte:fragment>
             <svelte:fragment slot="summary">Seven-Day Flow Chart</svelte:fragment>
             <svelte:fragment slot="content"><Sevendaychart {stream}/></svelte:fragment>
+          </AccordionItem>
+          <AccordionItem>
+            <svelte:fragment slot="lead"><svg xmlns="http://www.w3.org/2000/svg" width="1.4em" height="1.4em" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" d="M3 3v18h18m-3-4V9m-5 8V5M8 17v-3"></path></svg></svelte:fragment>
+            <svelte:fragment slot="summary">Flow Forecast</svelte:fragment>
+            <svelte:fragment slot="content">Coming Soon...</svelte:fragment>
           </AccordionItem>
         </Accordion>
       </div>
