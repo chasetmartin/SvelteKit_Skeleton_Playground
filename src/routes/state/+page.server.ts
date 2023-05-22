@@ -1,11 +1,6 @@
-<script lang="ts">
-	import { Accordion, AccordionItem, drawerStore } from "@skeletonlabs/skeleton";
-	import { each } from "svelte/internal";
+import type { PageServerLoad } from './$types';
 
-    function drawerClose(): void {
-        drawerStore.close();
-    }
-
+export const load = (async () => {
     const states = [
           {"name": "Alabama"},
           {"name": "Alaska"},
@@ -58,28 +53,7 @@
           {"name": "Wisconsin"},
           {"name": "Wyoming"}
         ]
-</script>
-
-<nav class="list-nav p-4">
-    <ul>
-        <li><a href="/" on:click={drawerClose}>Home</a></li>
-        <li><a href="/about" on:click={drawerClose}>About</a></li>
-        <li><a href="/popular" data-sveltekit-preload-data on:click={drawerClose}>Popular Rivers</a></li>
-        <li>
-            <Accordion>
-                <AccordionItem>
-                  <svelte:fragment slot="lead"></svelte:fragment>
-                  <svelte:fragment slot="summary">By State:</svelte:fragment>
-                  <svelte:fragment slot="content">
-                    
-                    <ul>
-                    {#each states as state }
-                        <li><a href="/state/{state.name.toLocaleLowerCase()}" on:click={drawerClose}>{state.name}</a></li>
-                    {/each}
-                    </ul>
-                  </svelte:fragment>
-                </AccordionItem>
-              </Accordion>
-        </li>
-    </ul>
-</nav>
+    return {
+        states
+    };
+}) satisfies PageServerLoad;
